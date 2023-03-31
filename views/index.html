@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\Public\css\style.css">
     <title>AirNet</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <ul class="navul">
+                <li class="navlist">
+                    <a class="nav-home" href="#home">home</a>
+                </li>
+                <li class="navlist">
+                    <a href="#search">search</a>
+                </li>
+                <li class="navlist">
+                    <a href="\views\signin.html" id="nm">sign in</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
     
+
+
+    <div class="upperhome">
+        <div class="home" id="home">
+            <div>
+                
+            </div>
+        </div>
+    </div> 
+
+
+
+
+
+    <!-- SEARCH -->
+    <div class="search" id="search">
+        <div class="one">
+            <h1>let's search flight</h1>
+        </div>
+        <div class="dropsearch">
+            <form action="" class="from">
+                <div class="flight">
+                    <label for="departFrom">Depart from</label>
+                    <input type="text" name="departFrom" id="departFrom" placeholder="from">
+                </div>
+                <div class="flight">
+                    <label for="arriveTo">Arrive to</label>
+                    <input type="text" name="arriveTo" id="arriveTo" placeholder="to">
+                </div>
+                <div class="flight">
+                    <label for="departureDate">Departure date</label>
+                    <input type="date" name="departureDate" id="departureDate">
+                </div>
+                <div class="flight">
+                    <label for="arrivalDate">Arrival date</label>
+                    <input type="date" name="arrivalDate" id="arrivalDate">
+                </div>
+                <div class="flight">
+                    <label for="">passenger</label>
+                    <input type="number" id="" name="" min="0" max="100" step="1" placeholder="passenger">
+                </div>
+                <div>
+                    <label class="journey" for="journey">
+                        <input class="jour" type="radio" name="journey" id="journey">&nbsp;return</input>
+                        <input class="jour" type="radio" name="journey" id="journey">&nbsp;one way</input>
+                    </label>
+                </div>
+                <button type="submit" class="flsubmit">search</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer holder">
+        <footer>
+            <ul class="footerul">
+                <li class="footerli">
+                    <a href="">Home</a>
+                </li class="footerli">
+                <li>
+                    <a href="">Features</a>
+                </li class="footerli">
+                <li>
+                    <a href="\views\faqs.html">FAQs</a>
+                </li>
+                <li class="footerli">
+                    <a href="\views\about.html">About us</a>
+                </li>
+            </ul>
+            <h1 class="company">AirNet 2023</h1>
+        </footer>
+    </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>

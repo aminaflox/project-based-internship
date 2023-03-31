@@ -1,0 +1,241 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: black;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* header */
+header{
+    height: 4.6em;
+}
+.navbar{
+    background-color: rgb(119, 130, 226);
+    position: fixed;
+    width: 100%;
+    height: 5.3em;
+    top: 0%;
+}
+.navbar ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    float: right;
+}
+.navbar li{
+    display: inline-block;
+    margin: 1.6em 1.5em 1.5em 1.5em;
+}
+.navbar li a{
+    text-decoration: none;
+}
+.navbar li a:hover{
+    color: white;
+}
+
+body{
+    background-image: url(https://wallpaper.dog/large/10749663.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.titleOne{
+    font-size: 35px !important;
+    text-align: center;
+    margin: 1em;
+}
+
+.field{
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 227px;
+    margin-bottom: 10em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    background-color: #d9e4dd85;
+}
+.field:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+}
+
+
+
+.ldiv{
+    padding-bottom: 1em;
+}
+.lin{
+    width: 30em;
+    border: solid 1.5px #D3D3D3;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+}
+.lin:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+.lla{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+.passw{
+    padding-left: 0.5em;
+    margin-left: 9em;
+    border: solid 1.5px #D3D3D3;
+}
+.passw:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+
+.userpass{
+    padding-bottom: 0.6em;
+}
+.twoin{
+    margin-left: 1.5em;
+    padding-left: 0.5em;
+    border: solid 1.5px #D3D3D3;
+}
+.twoin:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+.twolin{
+    display: flex;
+    justify-content: center;
+}
+
+
+.datein{
+    padding-bottom: 0.6em;
+}
+.bdate{
+    margin-left: 2em;
+    margin-right: 0.1em;
+    border: solid 1.5px #D3D3D3;
+}
+.bdate:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+.labdate{
+    display: flex;
+    justify-content: center;
+}
+
+.age{
+    width: 50px;
+    margin-right: 0.3em;
+    border: solid 1.5px #D3D3D3;
+}
+.age:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+
+.gender{
+    padding-left: 3em;
+}
+
+.numadd{
+    margin-top: 0.5em;
+    margin-left: 9em;
+    border: solid 1.5px #D3D3D3;
+    padding-left: 0.5em;
+}
+.numadd:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: azure;
+}
+
+
+.set{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.btreset{
+    width: 200px;
+    margin-left: 1em;
+}
+.btsubmit{
+    width: 200px;
+    margin-right: 1em;
+}
+.btreset:hover, .btsubmit:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    background-color: rgba(0, 0, 255, 0.661);
+}
+.this{
+    margin-top: 2em;
+}
+
+
+
+
+
+.have{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    text-decoration: none;
+    text-align: center;
+}
+.have:hover{
+    color: cyan;
+}
+
+
+input{
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+
+
+/* footer */
+.holder{
+    padding: 130px 0;
+    background-color:#7971bf;
+    color: black;
+    height: 4em;
+}
+.holder ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    margin-top: 5em;
+}
+.holder li{
+    display: inline;
+    margin: 50px 20px;
+}
+.holder ul a{
+    color: black;
+    text-decoration: none;
+}
+.holder ul a:hover{
+    color: white;
+}
+.company{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 0;
+}

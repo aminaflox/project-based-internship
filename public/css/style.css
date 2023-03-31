@@ -1,5 +1,210 @@
 /* general css */
+
 *{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10px;
+    font-size: 20px;
+    margin: 0;
+    color: black;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-image: url(https://wallpapercave.com/wp/wp4128869.jpg); */
+    background-image: url(https://wallpapers.com/images/hd/airplane-window-travel-teal-aesthetic-sky-hwammzwcjtusy8m9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+
+/* header */
+header{
+    height: 4.6em;
+}
+.navbar{
+    background-color: rgb(119, 130, 226);
+    position: fixed;
+    width: 100%;
+    height: 5.3em;
+    top: 0%;
+}
+.navbar ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    float: right;
+}
+.navbar li{
+    display: inline-block;
+    margin: 2.5em 1.5em 1.5em 1.5em;
+}
+.navbar li a{
+    text-decoration: none;
+}
+.navbar li a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: aqua;
+}
+
+
+.upperhome{
+    margin-top: 3.2em;
+}
+
+.search{ 
+    height: 32em; 
+    padding-top: 5em; 
+    margin-bottom: 10em;
+} 
+.one{ 
+    height: 8em; 
+    text-align: center; 
+    padding-top: 2em; 
+} 
+.dropsearch{ 
+    height: 15em;
+    display: flex; 
+    justify-content: center; 
+    padding-top: 2em; 
+    background-color: #debaced5;
+    box-shadow: 0 0 5pt 0.5pt;
+    /* #c0c0c0 */
+    border-radius: 1.5em; 
+    margin-left: 12em; 
+    margin-right: 12em; 
+} 
+.from{ 
+    padding-top: 2em; 
+    width: 55em; 
+    border-radius: 0.5em; 
+    text-align: center; 
+} 
+.flight{ 
+    display: grid; 
+    float: left; 
+    background-color: #a21acb80; 
+    height: 4.5rem; 
+    margin: 0em 0.5rem; 
+    border-radius: 0.5em; 
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    text-align: center; 
+} 
+input{ 
+    border: 0; 
+    background-color: transparent; 
+    width: 9em; 
+} 
+.flsubmit{
+    margin-top: 3em;
+    float: right;
+    margin-right: 0.5em;
+}
+
+.journey{
+    float: left;
+    margin-top: 3em;
+    padding-left: 0%;
+}
+.jour{
+    width: 3em !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+li{
+    list-style-type: none;
+}
+
+.usname{
+    background-color: transparent;
+    border: 0px;
+}
+
+
+
+
+
+
+
+
+button:not(:disabled){
+    cursor: pointer;
+}
+.srch{
+    background-color: transparent;
+    border: 0px;
+}
+.srch:hover{
+    color: aqua;
+}
+
+
+
+
+
+
+
+
+/* footer */
+.holder{
+    padding: 130px 0;
+    background-color:#7971bfcc;
+    color: black;
+    height: 5em;
+}
+.holder ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6px;
+    margin-bottom: 0;
+    margin-top: 5em;
+}
+.holder li{
+    display: inline;
+    margin: 50px 20px;
+}
+.holder ul a{
+    color: black;
+    text-decoration: none;
+}
+.holder ul a:hover{
+    color: white;
+}
+.company{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 0;
 }

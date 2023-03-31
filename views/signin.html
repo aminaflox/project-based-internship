@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\Public\css\signin.css">
+    <title>signin</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navul">
+                <li class="navlist">
+                    <a class="nav-home" href="\views\index.html">home</a>
+                </li>
+                <li class="navlist">
+                    <a href="#search">search</a>
+                </li>
+                <li class="navlist">
+                    <a href="\views\signin.html" id="nm">sign in</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <form action="post">
+            <fieldset class="field">
+                <table>
+                    <tr>
+                        <td>
+                            <h1 class="firstt">Sign In</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="userin" type="text" name="email" id="email" placeholder="Email Address">
+                            <input class="userin second" type="password" placeholder="Password" name="psw" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btlogin" type="submit"><a class="login" href="\views\index.html">Sing In</a></button><br>
+                            <label class="login checkbox">
+                                <input class="checkbox" type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a class="noacc" href="\views\signup.html"><h4 class="noacc">Do not have an account?</h4></a>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="footer holder">
+        <footer>
+            <ul class="footerul">
+                <li class="footerli">
+                    <a href="\views\index.html">Home</a>
+                </li class="footerli">
+                <li>
+                    <a href="">Features</a>
+                </li class="footerli">
+                <li>
+                    <a href="\views\faqs.html">FAQs</a>
+                </li>
+                <li class="footerli">
+                    <a href="\views\about.html">About us</a>
+                </li>
+            </ul>
+            <h1 class="company">AirNet 2023</h1>
+        </footer>
+    </div>
+</body>
+</html>
