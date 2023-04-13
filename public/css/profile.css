@@ -11,6 +11,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     height: auto;
+    min-height: auto;
     margin-bottom: 0;
 }
 
@@ -53,14 +54,141 @@ header{
 
 
 
+/* middle */
+.box{
+    height: 30em;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    min-width: min-content;
+    max-height: max-content;
+}
+.sidebar-content{
+    float: left;
+}
+.card1{
+    border: 2px solid;
+    padding: 1em 1em 1em 1em;
+    margin-left: 3em;
+    margin-bottom: 1em;
+    min-height: 34em;
+    min-width: 20em;
+    border-radius: 5px;
+}
+.card{
+    border: 2px solid;
+    padding: 1em 1em 1em 1em;
+    margin-right: 1em;
+    margin-left: 27em;
+    min-width: 30em;
+    max-width: max-content;
+    min-height: 34em;
+    max-height: fit-content;
+    text-align: center;
+    border-radius: 5px;
+}
+.card-header{
+    padding-top: 2em;
+}
+.card-title{
+    margin-bottom: 1em;
+    font-size: large;
+}
+.edit_user{
+    margin-top: 3em;
+}
+.form-group{
+    margin-bottom: 1.5em;
+}
+.form-control{
+    height: 3em;
+    width: 20em;
+    border: 0;
+    border-bottom: 1px solid;
+}
+.form-control:hover{
+    border: 1px solid;
+}
+.form-control:focus{
+    outline: none;
+}
+.save{
+    margin: 1em;
+    height: 2em;
+    width: 10em;
+    border-radius: 5px;
+    border-color: rgb(220, 217, 217);
+}
+.save:hover{
+    background-color: aliceblue;
+}
+
+
+
+.card-body-p{
+    margin: 1em;
+    text-align: center;
+}
+.font-weight-semibold{
+    margin: 2em 1em 0.5em 1em;
+}
+.card-body-u{
+    margin-top: 2em;
+}
+.nav-u{
+    text-decoration: solid;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 2.5em;
+    margin-top: 3.5em;
+}
+a{
+    text-decoration: none;
+}
+.ai{
+    border-bottom: 1px solid;
+}
+.ia{
+    margin-top: 2em;
+    padding: 1em 1em 1em 1em;
+    border-bottom: 1px solid;
+}
+.ai:hover{
+    background-color: rgba(250, 234, 215, 0.733);
+    border-top: 1px solid;
+}
+.ia:hover{
+    background-color: rgba(250, 234, 215, 0.733);
+    border-top: 1px solid;
+}
+
+.onclick{
+    background-color: transparent;
+    height: fit-content;
+    width: 15em;
+    padding: 1em 1em 1em 1em;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
 /* footer */
 .holder{
+    width: 100%;
+    min-width: 70em;
     padding: 130px 0;
     background-color:#7971bfcc;
     color: black;
     height: 5em;
     margin-top: 10em;
-    width: 100%;
+    margin-bottom: 0%;
 }
 .holder ul{
     padding: 0;
@@ -91,42 +219,3 @@ header{
     margin-bottom: 0;
 }
 
-/* middle */
-.box{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin-top: 2%;
-    margin-left: 20%;
-    font-size: 28px;
-    padding: 0 10px;
-    width: 58%;
-    height: 100%;
-    box-shadow: 1px 1px 8px 0 grey;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 20px 0 20px 50px;
-}
-.main table {
-    border: none;
-    font-size: 16px;
-    height: 270px;
-    width: 80%;
-}
-.icon{
-    text-align: center
-}
-table{
-    margin-top: 1em;
-    text-align: center;
-}
-input{
-    border-color: transparent;
-    border-bottom: 1px solid;
-}
-input:focus{
-    outline: none;
-}
-.u{
-    font-size: 20px;
-    text-align: center;
-    padding-top: 2em;
-} 

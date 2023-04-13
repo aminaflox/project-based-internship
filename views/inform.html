@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\inform.css">
+    <title>AirNet</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+    <!-- navbar -->
+    <!-- header -->
+    <div id="header"></div>
+    <!-- middle -->
+    <div id="home">
+        <div class="first-div">
+            <div class="fill">
+                <h3>Please, fill in the Form</h3>
+            </div>
+            
+            <div class="div">
+                <div class="just-div" id="add">
+                    <form action="">
+                        <div>
+                            <div class="traveller a">
+                                <div class="note">
+                                    <h5>Note: "First Name" and "Last Name" must match your travel document exactly.</h5>
+                                </div>
+                                <div class="t">
+                                    <h4>Form for Traveller</h4>
+                                </div>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name" name="fName">
+                                            <input type="text" class="form-control" placeholder="Last name" name="lName">
+                                            <input type="date" name="bdate" id="" placeholder="birthday">
+                                            <input class="age" type="number" name="age" id="age" min="0" max="100" step="1" placeholder="Age">
+                                            <input type="text" name="relation" id="" placeholder="relation">
+                                        </div>
+                                        <div>
+                                            <label class="gender" for="gender" >
+                                                <input class="type" type="radio" name="gender" id="gender">f</input>
+                                                <input class="type" type="radio" name="gender" id="gender">m</input>
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="btn">
+                                        <button id="push">add Traveller</button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div class="traveller b">
+                                <div class="note">
+                                    <h5>Note: This is who we will be in contact with about this booking</h5>
+                                </div>
+                                <form action="">
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="First name" name="">
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="">
+                                        <input type="tel" name="" id="" placeholder="Phone Number">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="bt"><button>Confirm</button></div>
+                    </form>
+                </div>
+                <div class="adding"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer holder" id="footer"></div>
+
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script>
+</body>
+</html>

@@ -25,14 +25,13 @@ body{
     cursor: pointer;
     box-shadow: 0 0 5pt 0.5pt #D3D3D3;
 }
-
 .firstt{
-    margin: 0.5em 1em 0 39%;
+    margin: 2em 1em 0em 37%;
     font-size: 40px;
 }
 
 .userin{
-    margin: 4em 4em 0 8em;
+    margin: 4em 4em 0em 5em;
     border: solid 1.5px #D3D3D3;
     padding-left: 0.5em;
     height: 1.9em;
@@ -51,20 +50,21 @@ body{
     background-color: transparent;
     border: 0;
     font-size: 1.5em;
-    padding: 0.5em 1em 0.1em 50%;
+    margin: 1em 2em 1em 8.5em;
 }
 .btlogin:hover{
-    background-color: transparent;
+    background-color: azure;
+    border: 1px solid;
+    border-radius: 1px;
 }
 
-.login{
+/* .login{
     text-decoration: none;
     text-align: center;
-}
+} */
 
 .checkbox{
-    margin-left: 6em;
-    margin-top: 1em;
+    margin: 0.5em 1em 1em 5em;
     font-size: 1em;
 }
 .checkbox:hover{

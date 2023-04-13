@@ -4,88 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\Public\css\faqs.css">
+    <link rel="stylesheet" href="\css\faqs.css">
     <title>AirNet</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="navul">
-                <li class="navlist">
-                    <a class="nav-home" href="\views\index.html">home</a>
-                </li>
-                <li class="navlist">
-                    <a href="#search">search</a>
-                </li>
-                <li class="navlist">
-                    <a href="\views\signin.html" id="nm">sign in</a>
-                </li>
-                
-            </ul>
-        </nav>
-    </header>
+    <!-- header -->
+    <div id="header"></div>
 
-    <div class="hold">
-        <div class="tit">
-            <h1>Frequently Asked Questions</h1>
+    <main>
+        <div class="hold">
+            <div class="tit">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+            <div class="faq">
+                <input id='faq-a' type='checkbox'>
+                <label for='faq-a'>
+                    <p class="faq-heading">What happens after I've booked my flight?</p>
+                    <div class='faq-arrow'></div>
+                    <p class="faq-text">Once you select your flight, you’ll book
+                         directly with one of our airline or travel partners, 
+                         usually on their site. Your flight booking confirmation 
+                         email and all the other info you'll need will 
+                         come from them.</p>
+                </label>
+                <input id='faq-b' type='checkbox'>
+                <label for='faq-b'>
+                    <p class="faq-heading">How can I find the best latest minute flight deals?</p>
+                    <div class='faq-arrow'></div>
+                    <p class="faq-text">Sometimes it’s worth waiting until the last minute to see 
+                        if airlines reduce the price of unsold seats on their flights – but this can be a gamble.</p>
+                </label>
+                <input id='faq-c' type='checkbox'>
+                <label for='faq-c'>
+                    <p class="faq-heading">What is the best day of the week to buy plane tickets?</p>
+                    <div class='faq-arrow'></div>
+                    <p class="faq-text">As more business
+                          travelers have started booking their flights during the week, the best day 
+                          to buy those tickets is now Sunday. To avail more savings on flight tickets,
+                         try to book on a Sunday that is more than 21 days ahead of your trip.</p>
+                </label>
+                <input id='faq-d' type='checkbox'>
+                <label for='faq-d'>
+                    <p class="faq-heading">When is the best time to buy airline tickets?</p>
+                    <div class='faq-arrow'></div>
+                    <p class="faq-text">There’s no specific right time to book your travel. When traveling internationally, 
+                        prices usually start to increase 21 days before departure*.</p>
+                </label>
+            </div>
         </div>
-        <div class="faq">
-            <input id='faq-a' type='checkbox'>
-            <label for='faq-a'>
-                <p class="faq-heading">What happens after I've booked my flight?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">Once you select your flight, you’ll book
-                     directly with one of our airline or travel partners, 
-                     usually on their site. Your flight booking confirmation 
-                     email and all the other info you'll need will 
-                     come from them.</p>
-            </label>
-            <input id='faq-b' type='checkbox'>
-            <label for='faq-b'>
-                <p class="faq-heading">How can I find the best latest minute flight deals?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">Sometimes it’s worth waiting until the last minute to see 
-                    if airlines reduce the price of unsold seats on their flights – but this can be a gamble.</p>
-            </label>
-            <input id='faq-c' type='checkbox'>
-            <label for='faq-c'>
-                <p class="faq-heading">?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">fly high</p>
-            </label>
-            <input id='faq-d' type='checkbox'>
-            <label for='faq-d'>
-                <p class="faq-heading">?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">So, <strong>I will fill this after</p>
-            </label>
-            <input id='faq-e' type='checkbox'>
-            <label for='faq-e'>
-                <p class="faq-heading">?</p>
-                <div class='faq-arrow'></div>
-                <p class="faq-text">fly high</p>
-            </label>
-        </div>
-    </div>
+    </main>
 
-    <div class="footer holder">
-        <footer>
-            <ul class="footerul">
-                <li class="footerli">
-                    <a href="\views\index.html">Home</a>
-                </li class="footerli">
-                <li>
-                    <a href="">Features</a>
-                </li class="footerli">
-                <li>
-                    <a href="\views\faqs.html">FAQs</a>
-                </li>
-                <li class="footerli">
-                    <a href="\views\about.html">About us</a>
-                </li>
-            </ul>
-            <h1 class="company">AirNet 2023</h1>
-        </footer>
-    </div>
+    <!-- footer -->
+    <div class="footer holder" id="footer"></div>
+
+    <script> 
+        $(function(){
+          $("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+    </script>
 </body>
 </html>
