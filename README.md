@@ -65,6 +65,10 @@ On the footer, users can see pages like: about us, frequently asked questions, f
 //faqs
 ![image](https://user-images.githubusercontent.com/98947733/231989421-a60f9fd2-a06a-4dd0-b1c1-aeff52f5eedb.png)
 
+//Relationship schema of the project
+![image](https://user-images.githubusercontent.com/98947733/232080016-59758e08-457e-45f5-8150-a0c7dde80904.png)
+
+
 
 
 
