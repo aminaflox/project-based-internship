@@ -1,0 +1,29 @@
+
+/* footer */
+*{
+    font-size: 18px;
+}
+.foothold{
+    width: 100%;
+    min-width: 30em;
+    padding: 130px 0;
+    background-color:#7971bf;
+    color: black;
+    height: 5em;
+    margin-bottom: 0%;
+}
+.footercontainer{
+    min-width: min-content;
+}
+.ft{
+    display: flex;
+    justify-content: center;
+}
+
+.ftr{
+    display: inline;
+    margin: 2em 2.5em 2em 1em;
+}
+.company{
+    text-align: center;
+}

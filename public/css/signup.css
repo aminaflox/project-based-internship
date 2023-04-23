@@ -1,53 +1,112 @@
-*{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    color: black;
-}
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-/* header */
-header{
-    height: 4.6em;
-}
-.navbar{
-    background-color: rgb(119, 130, 226);
-    position: fixed;
-    width: 100%;
-    height: 5.3em;
-    top: 0%;
-}
-.navbar ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    float: right;
-}
-.navbar li{
-    display: inline-block;
-    margin: 1.6em 1.5em 1.5em 1.5em;
-}
-.navbar li a{
-    text-decoration: none;
-}
-.navbar li a:hover{
-    color: white;
-}
-
-body{
-    background-image: url(https://wallpaper.dog/large/10749663.jpg);
+.signupbody{
+    margin: 0%;
+    background-image: url(https://media.istockphoto.com/id/1433196585/photo/above-the-horizon-at-dusk.jpg?s=612x612&w=0&k=20&c=orVTDteq2e6Rq1f8ioy1ggc5ca2UUhuvapInk89NNGg=);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-bottom: 0;
+    height: 70em;
+    min-width: 30em;
+    text-align: center;
 }
+.ddiv{
+    margin-top: 3em;
+    border: 1px solid white;
+    border-radius: 0.2em;
+    min-width: 20em;
+    max-width: 30em;
+    height: 46.5em;
+}
+.signupform{
+    padding: 5em;
+    display: inline-block;
+}
+.divforheader{
+    margin: 3em 1em 2em 1em;
+}
+.z{
+    color: white;
+    font-size: 25px;
+}
+.sinupinput{
+    width: 15em;
+    border-radius: 0.2em;
+    margin-top: 1em;
+    height: 2em;
+    background-color: white;
+}
+.sinupinput::placeholder{
+    color: black;
+}
+.sinupinput:hover{
+    border-color: azure;
+}
+
+.g{
+    width: 1em;
+    margin-top: -1em;
+    position: absolute;
+    top: 39.5em;
+}
+.gf{
+    margin-left: 2em;
+}
+.labels{
+    margin-left: 1.9em;
+    color: black;
+}
+.label{
+    margin-right: 1em;
+    margin-left: 3.5em;
+    color: black;
+}
+.tg{
+    color: black;
+}
+.sb{
+    color: black;
+    margin: 1em 2em 1.5em 2.5em;
+}
+.sb:hover{
+    border-color: white;
+}
+.hrtwo{
+    width: 7em;
+    margin: 1em 1em 0.5em 1em;
+    display: inline-block;
+}
+.radio{
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 .titleOne{
     font-size: 35px !important;
     text-align: center;
@@ -200,42 +259,6 @@ body{
 
 input{
     background-color: rgba(255, 255, 255, 0.64);
-}
+} */
 
 
-
-/* footer */
-.holder{
-    padding: 130px 0;
-    background-color:#7971bf;
-    color: black;
-    height: 4em;
-}
-.holder ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    margin-top: 5em;
-}
-.holder li{
-    display: inline;
-    margin: 50px 20px;
-}
-.holder ul a{
-    color: black;
-    text-decoration: none;
-}
-.holder ul a:hover{
-    color: white;
-}
-.company{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 18px;
-    color: black;
-    font-weight: bolder;
-    margin-bottom: 0;
-}

@@ -3,58 +3,82 @@
     /* font-size: 18px; */
     color: black;
 }
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
-
-/* header */
-header{
-    height: 4.6em;
-}
-.navbar{
-    background-color: rgb(119, 130, 226);
-    position: fixed;
-    width: 100%;
-    height: 5.3em;
-    top: 0%;
-}
-.navbar ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    float: right;
-}
-.navbar li{
-    display: inline-block;
-    margin: 1.6em 1.5em 1.5em 1.5em;
-}
-.navbar li a{
-    text-decoration: none;
-}
-.navbar li a:hover{
-    color: white;
-}
 
 
 /* middle */
+.home{
+    padding-top: 5em;
+}
 .hm{
     text-align: center;
 }
-.start{
+
+.img{
+    text-align: center;
+    height: 300px;
+}
+.logo{
+    height: 250px;
+}
+.we{
+    text-align: center;
+    margin: 5em;
+}
+.hr{
+    min-width: 15em;
+    margin: 1em 5em 1em 5em;
+    display: inline-block;
+}
+.strt{
+    margin: 1em 1em 1em 1em;
+}
+.us{
+    margin-top: 5em;
+}
+.co{
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+.ptag{
+    text-align: center;
+    min-width: 15px;
+}
+.me{
+    margin: 1em 8em 1em 8em;
+    min-width: fit-content;
+    min-height: min-content;
+}
+.pic{
+    height: 300px;
+}
+
+.media{
+    text-align: center;
+    margin-bottom: 10em;
+}
+.media img{
+    height: 30px;
+}
+
+
+
+
+
+/* .m{
     margin-top: 5em;
     font-size: 19px;
     margin-bottom: 1em;
+    min-width: 10em;
+    max-width: 20em;
+    min-height: 5em;
+    max-height: max-content;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 .we{
-    margin-left: 20em;
-    margin-right: 20em;
+    padding: 0;
 }
 .start img{
     height: 200px;
@@ -78,69 +102,4 @@ hr{
     margin-top: 8em;
     margin-bottom: 5em;
     text-align: center;
-}
-.img{
-    text-align: center;
-}
-img{
-    height: 300px;
-}
-.me{
-    margin: 1em 30em 1em 30em;
-}
-
-.media{
-    text-align: center;
-    margin-bottom: 10em;
-}
-.media img{
-    height: 30px;
-}
-
-/* footer */
-.holder{
-    padding: 130px 0;
-    background-color:#7971bfcc;
-    color: black;
-    height: 5em;
-}
-.holder ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    margin-top: 5em;
-}
-.holder li{
-    display: inline;
-    margin: 50px 20px;
-}
-.holder ul a{
-    color: black;
-    text-decoration: none;
-}
-.holder ul a:hover{
-    color: white;
-}
-.company{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 18px;
-    color: black;
-    font-weight: bolder;
-    margin-bottom: 0;
-}
-
-
-
-.image{
-    width: 10em;
-    height: 11em;
-    float: left;
-
-}
-h4{
-    text-align: center;
-}
+} */

@@ -1,0 +1,60 @@
+<div class="signupbody">
+    <form class="signupform" action="/signup" method="post">
+        <div class="ddiv">
+            <div>
+                <div class="divforheader">
+                    <h1 class="z">Sign Up Now</h1>
+                </div>
+                <div>
+                    <input class="e sinupinput" type="email" name="email" id="email" placeholder="Email"><br>
+                </div>
+                <div>
+                    <input class="p sinupinput" type="password" name="password" id="password" placeholder="Password"><br>
+                </div>
+                <div>
+                    <input class="fn sinupinput" type="text" name="firstName" id="firstName" placeholder="First Name"><br>
+                </div>
+                <div>
+                    <input class="ln sinupinput" type="text" name="lastName" id="lastName" placeholder="Last Name"><br>
+                </div>
+                <div>
+                    <input class="d sinupinput" type="date" name="bdate" id="bdate" placeholder="Birth Date"><br>
+                </div>
+                <div>
+                    <input class="n sinupinput" type="number" name="age" id="age" min="0" max="100" step="1" placeholder="Age"><br>
+                </div>
+                <div class="radio">
+                    <label class="tg" for="gender">Gender:</label>
+                    <input class="g" type="radio" name="gender" id="gender" >
+                    <label class="labels" for="gender">f</label>
+                    <input class="g gf" type="radio" name="gender" id="gender">
+                    <label class="label" for="gender">m</label>
+                </div>
+                <div>
+                    <input class="t sinupinput" type="tel" name="phonenumber" id="phonenumber" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="Phone Number"><br>
+                </div>
+                <div>
+                    <div>
+                        <input class="c sinupinput" type="text" name="city" id="city" placeholder="City">
+                    </div>
+                    <div>
+                        <input class="s sinupinput" type="text" name="streetAddrs" id="streetAddrs" placeholder="Street Address">
+                    </div>
+                    <div>
+                        <input class="na sinupinput" type="text" name="numberAddrs" id="numberAddrs" placeholder="Number"><br>
+                    </div>
+                </div>
+                <hr class="hrtwo">
+                <div>
+                    <div class="subbtn">
+                        <button class="r sb" type="reset">reset</button>
+                        <button class="sm sb" type="submit">sign up</button>
+                    </div>
+                </div>
+                <div>
+                    <a class="haveanacc" href="/signin">Already have an account</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

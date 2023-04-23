@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-body{
+.indexbody{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,53 +16,14 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-bottom: 0;
+    height: 70em;
+    min-width: 30em;
 }
 
-/* header */
-header{
-    height: 4.6em;
-}
-.navbar{
-    background-color: rgb(119, 130, 226);
-    position: fixed;
-    width: 100%;
-    height: 5.3em;
-    top: 0%;
-}
-.navbar ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    float: right;
-}
-.navbar li{
-    display: inline-block;
-    margin: 2.5em 1.5em 1.5em 1.5em;
-}
-.navbar li a{
-    text-decoration: none;
-}
-.navbar li a:hover{
-    color: white;
-}
-a{
-    color: black;
-    text-decoration: none;
-}
 
-a:hover{
-    color: aqua;
-}
 
 
 /* middle */
-.mar{
-    height: 16em;
-}
-
 .search{ 
     height: 30em;  
     margin-bottom: 10em;
@@ -72,13 +33,14 @@ a:hover{
     height: fit-content;
     display: flex; 
     justify-content: center; 
-    padding: 2em; 
+    padding: 1.5em; 
     background-color: #b4b2b2e8;
     box-shadow: 0 0 5pt 0.5pt;
     /* #c0c0c0 */
     border-radius: 1.5em; 
-    margin-left: 11em; 
-    margin-right: 11em; 
+    margin-left: 10em; 
+    margin-right: 13em; 
+    min-width: 8em;
 } 
 .from{ 
     padding-top: 2em; 
@@ -95,18 +57,18 @@ a:hover{
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5); 
     text-align: center;
 } 
-input{ 
+.input{ 
     border: 1px solid; 
     background-color: transparent;
     width: 9em;
     color: black;
 }
-input:hover{
+.input:hover{
     cursor: pointer;
     border: 1px solid;
     color: white;
 }
-input:focus{
+.input:focus{
     outline-style: none;
 }
 .flsubmit{
@@ -144,51 +106,4 @@ button{
 }
 button:not(:disabled){
     cursor: pointer; 
-}
-
-
-
-
-
-
-
-
-/* footer */
-.holder{
-    width: 100%;
-    min-width: 70em;
-    padding: 130px 0;
-    background-color:#7971bfcc;
-    color: black;
-    height: 5em;
-    margin-top: 10em;
-    margin-bottom: 0%;
-}
-.holder ul{
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6px;
-    margin-bottom: 0;
-    margin-top: 5em;
-}
-.holder li{
-    display: inline;
-    margin: 50px 20px;
-}
-.holder ul a{
-    color: black;
-    text-decoration: none;
-}
-.holder ul a:hover{
-    color: white;
-}
-.company{
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: black;
-    font-weight: bolder;
-    margin-bottom: 0;
 }
