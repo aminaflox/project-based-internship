@@ -10,10 +10,6 @@ let renderIndex = function(req, res) {
   res.render('index', {layout: 'main'});
 }
 
-let renderSignin = function(req, res){
-  res.render('signin', {layout: 'main'})
-}
-
 let renderSearch = function(req, res){
   res.render('search', {layout: 'main'})
 }
@@ -35,7 +31,6 @@ let renderInform = function(req, res){
 }
 
 router.route('/').get(renderIndex);
-router.route('/signin').get(renderSignin);
 router.route('/search').get(renderSearch);
 router.route('/about').get(renderAbout);
 router.route('/faqs').get(renderFaqs);

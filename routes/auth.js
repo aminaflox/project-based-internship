@@ -28,7 +28,7 @@ passport.serializeUser(function(row, cb) {
     admin = true;
   }
   return process.nextTick(function() {
-    cb(null, { id: user.ID, admin: admin, username: user.Username, fname: user.Fname, mname: user.Mname, lname: user.Lname, email: user.Email, cellphone: user.Cellphone });
+    cb(null, { userID: user.userID, email: user.email, password: user.password, firstName: user.firstName, lastName: user.lastName, city: user.city, streetAddrs: user.streetAddrs, numberAddrs: user.numberAddrs, bdate: user.bdate, age: user.age, gender: user.gender, phonenumber: user.phonenumber });
   });
 });
 
@@ -62,10 +62,14 @@ router.route("/signup").post((req,res)=>{
     let gender=req.body.gender;
     let phonenumber=req.body.phonenumber;
     
-    crypto.pbkdf2(req.body.password, salt, 310000, 32, 'sha256',function(err,password){
+    
+    console.log(userID, email, firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber, salt);
+
+    crypto.pbkdf2(req.body.password, salt, 310000, 32, 'sha256',function(err,hashedPassword){
       if(err){return nextTick(err);}
-        model.insertUser(userID,email,password.toString("hex"),firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber,salt.toString("hex"),(error,row)=>{
+        model.insertUser(userID,email,hashedPassword.toString("hex"),firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber,(error,row)=>{
           if(error){
+            console.log(error);
           }
           else{
             res.redirect("/");

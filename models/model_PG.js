@@ -24,21 +24,25 @@ async function connect(){
 async function insertUser (userID,email,password,firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber,salt, callback) {
    
     /////FIX///
-const sql = `INSERT INTO "User"("userID","email","password","firstName","lastName","city","streetAddrs","numberAddrs","bdate","age","gender","phonenumber","salt") VALUES
- ('${email}','${password}','${firstName}','${lastName}','${city}','${streetAddrs}','${numberAddrs}','${bdate}','${age}','${gender}','${phonenumber}','${salt}') 
+const sql = `INSERT INTO "user"("userID","email","password","firstName","lastName","city","streetAddrs","numberAddrs","bdate","age","gender","phonenumber") VALUES
+ ('${email}','${password}','${firstName}','${lastName}','${city}','${streetAddrs}','${numberAddrs}','${bdate}','${age}','${gender}','${phonenumber}') 
  RETURNING "userID"`;
+ const sql2 = `SELECT * FROM "user"`;
     console.log('to insert...', sql)
     // how to return the autoincremented value of an inserted record: https://stackoverflow.com/questions/37243698/how-can-i-find-the-last-insert-id-with-node-js-and-postgresql
     try {
         const client = await connect();
         console.log('29');
+        // const res1 = await client.query(sql2);
+        console.log(res1);
         const res = await client.query(sql);
         console.log(res);
+        
         
         await client.release();
         console.log(`user inserted`);
         callback(null, [{"userID":res.rows[0].userID,"email": email,"password": password,"firstName": firstName,"lastName": lastName,
-        "city": city,"streetAddrs": streetAddrs,"numberAddrs": numberAddrs,"bdate": bdate,"age": age,"gender": gender,"phonenumber": phonenumber, "salt": salt }]); 
+        "city": city,"streetAddrs": streetAddrs,"numberAddrs": numberAddrs,"bdate": bdate,"age": age,"gender": gender,"phonenumber": phonenumber }]); 
 
     } 
     catch (err) {
