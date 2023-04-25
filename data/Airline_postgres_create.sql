@@ -208,10 +208,11 @@ ALTER TABLE "belongsTo" ADD CONSTRAINT "belongsTo_fk1" FOREIGN KEY ("seat_no") R
 
 
 
-
-
-
-
-
-
-
+ALTER TABLE public."user" ALTER COLUMN "userID" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public."user_userID_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);

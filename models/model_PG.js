@@ -21,20 +21,20 @@ async function connect(){
     }
 }
 
-async function insertUser (userID,email,password,firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber,salt, callback) {
+async function insertUser (email,password,firstName,lastName,city,streetAddrs,numberAddrs,bdate,age,gender,phonenumber,salt, callback) {
    
     /////FIX///
-const sql = `INSERT INTO "user"("userID","email","password","firstName","lastName","city","streetAddrs","numberAddrs","bdate","age","gender","phonenumber") VALUES
- ('${email}','${password}','${firstName}','${lastName}','${city}','${streetAddrs}','${numberAddrs}','${bdate}','${age}','${gender}','${phonenumber}') 
+const sql = `INSERT INTO "user"("email","password","firstName","lastName","city","streetAddrs","numberAddrs","bdate","age","gender","phonenumber","salt") VALUES
+ ('${email}','${password}','${firstName}','${lastName}','${city}','${streetAddrs}','${numberAddrs}','${bdate}','${age}','f','${phonenumber}','${salt}') 
  RETURNING "userID"`;
- const sql2 = `SELECT * FROM "user"`;
+ //const sql2 = `SELECT * FROM "user"`;
     console.log('to insert...', sql)
     // how to return the autoincremented value of an inserted record: https://stackoverflow.com/questions/37243698/how-can-i-find-the-last-insert-id-with-node-js-and-postgresql
     try {
         const client = await connect();
         console.log('29');
         // const res1 = await client.query(sql2);
-        console.log(res1);
+        //console.log(res1);
         const res = await client.query(sql);
         console.log(res);
         
@@ -52,16 +52,17 @@ const sql = `INSERT INTO "user"("userID","email","password","firstName","lastNam
     
 }
 
-async function findUser(email, password, callback){
-    const sql ={text: `SELECT * FROM "user" WHERE "email"=$1 and "password"=$2`, values: [email, password]} /*and "Password"='${Password}`*/;
-
+async function findUser(email, callback){
+    console.log
+    const sql ={text: `SELECT * FROM "user" WHERE "email"=$1 `, values: [email]} /*and "Password"='${Password}`*/;
+    console.log(sql)
     try{
+        console.log("27")
         const client = await connect();
         console.log("28");
         const res = await client.query(sql);
         console.log(res);
 
-       
         console.log('user found');
         callback(null, res.rows);
         await client.release();
@@ -73,4 +74,4 @@ async function findUser(email, password, callback){
 }
 
 
-export { connect, insertUser};
+export {  insertUser, findUser};
