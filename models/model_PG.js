@@ -51,9 +51,7 @@ const sql = `INSERT INTO "user"("email","password","firstName","lastName","city"
 
     
 }
-
 async function findUser(email, callback){
-    console.log
     const sql ={text: `SELECT * FROM "user" WHERE "email"=$1 `, values: [email]} /*and "Password"='${Password}`*/;
     console.log(sql)
     try{
@@ -74,4 +72,4 @@ async function findUser(email, callback){
 }
 
 
-export {  insertUser, findUser};
+export {insertUser, findUser};

@@ -7,7 +7,10 @@ let renderSignup = function (req, res) {
 }
 
 let renderIndex = function(req, res) {
-  res.render('index', {layout: 'main'});
+  if(!req.user){
+    return res.render('index',{layout:'main',user:null})
+  }
+  res.render('index', {layout: 'main',user:req.user});
 }
 
 let renderSearch = function(req, res){

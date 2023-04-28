@@ -4,8 +4,10 @@ import LocalStrategy from 'passport-local';
 import crypto from 'crypto';
 import * as model from '../models/model_PG.js';
 
-passport.use(new LocalStrategy(function verify(email, password, cb) {
-  console.log('here')
+passport.use(new LocalStrategy(
+{usernameField:'email',passwordField:'password'},
+function verify(email, password, cb) { 
+  
   model.findUser(email, function(err, row) {
   if (err) { return cb(err); }
   if (!row) { return cb(null, false, { message: 'Incorrect email or password.' }); }
@@ -24,9 +26,12 @@ const router = express.Router();
 
 passport.serializeUser(function(row, cb) {
   const user = row[0];
-  console.log(row[0])
+  let admin = false;
+  if(row[1]){
+    admin = true;
+  }
   return process.nextTick(function() {
-    cb(null, { userID: user.userID, email: user.email, password: user.password, firstName: user.firstName, lastName: user.lastName, city: user.city, streetAddrs: user.streetAddrs, numberAddrs: user.numberAddrs, bdate: user.bdate, age: user.age, gender: user.gender, phonenumber: user.phonenumber, salt: user.salt });
+    cb(null, { userID: user.userID,admin: admin ,email: user.email, password: user.password, firstName: user.firstName, lastName: user.lastName, city: user.city, streetAddrs: user.streetAddrs, numberAddrs: user.numberAddrs, bdate: user.bdate, age: user.age, gender: user.gender, phonenumber: user.phonenumber, salt: user.salt });
   });
 });
 
@@ -38,7 +43,7 @@ passport.deserializeUser(function(user, cb) {
 
 router.route('/signin').get(function (req, res) {
   res.render('signin', {layout:'main'});
-})
+});
 
 router.post('/signin/password', 
   passport.authenticate('local', { failureRedirect: '/signin', failureMessage: true }),

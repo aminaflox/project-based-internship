@@ -18,14 +18,14 @@ CREATE TABLE public."user" (
 );
 
 
-
+--droped not null on "arrivalDate" --
 CREATE TABLE public."flight" (
 	"flightNO" integer NOT NULL,
 	"airline_code" TEXT NOT NULL,
 	"journeyID" integer NOT NULL,
 	"flightName" TEXT NOT NULL,
 	"departureDate" DATE NOT NULL,
-	"arrivalDate" DATE NOT NULL,
+	"arrivalDate" DATE NULL,
 	"departFrom" TEXT NOT NULL,
 	"arriveTo" TEXT NOT NULL,
 	CONSTRAINT "flight_pk" PRIMARY KEY ("flightNO")

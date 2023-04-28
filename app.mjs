@@ -37,7 +37,6 @@ app.use(passport.authenticate('session'));
 
 
 
-
 app.use('/', routes);
 app.use('/', auth);
 
