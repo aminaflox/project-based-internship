@@ -3,9 +3,18 @@
         <div class="">
             <h3 class="ttr">Please, fill in the Form</h3>
         </div>
+        {{#formData}}
+        <div>
+            {{departFrom}}-{{arriveTo}}
+        </div> 
+        <div>
+            Departure:{{departureDate}}<br>
+            Arrival: {{arrivalDate}}
+        </div> 
+        {{/formData}}
         <div>
             <div>
-                <form action="">
+                <form action="/search/passenger/confirmation" method="POST">
                     <div>
                         <div class="formfortr">
                             <div class="informnote">
@@ -16,31 +25,20 @@
                             </div>
                             <div class="row">
                                     <div class="col">
-                                        <input class="rowcol" type="text" placeholder="First name" name="fName">
-                                        <input class="rowcol" type="text" placeholder="Last name" name="lName">
-                                        <input class="rowcol dt" type="date" name="bdate" id="" placeholder="birthday">
-                                        <input class="rowcol" type="number" name="age" id="age" min="0" max="100" step="1" placeholder="Age">
+                                        <input class="rowcol" type="text" placeholder="First name" name="fName" id="fName">
+                                        <input class="rowcol" type="text" placeholder="Last name" name="lName" id="lName">
+                                        <input class="rowcol dt" type="date" name="bdate" id="bdate" placeholder="birthday">
+                                        {{!-- <input class="rowcol" type="number" name="age" id="age" min="0" max="100" step="1" placeholder="Age"> --}}
                                     </div>
-                                    <div class="informgen">
+                                    {{!-- <div class="informgen">
                                         <label class="gen dt" for="">Gender:</label>
                                         <input class="rad bb" type="radio" name="gender" id="gender">
-                                        <label class="gen" for="">f</label>
+                                        <label class="gen" for="gender">f</label>
                                         <input class="rad dd" type="radio" name="gender" id="gender">
-                                        <label class="gen gg" for="">m</label>
-                                    </div>
+                                        <label class="gen gg" for="gender">m</label>
+                                    </div> --}}
                             </div>
                         </div>
-                        <div class="formforres">
-                            <div class="informnote">
-                                <p class="ot">Note: This is who we will be in contact with about this booking</p>
-                            </div>
-                            <div class="">
-                                <input class="rowcol" type="text"  placeholder="First name" name="">
-                                <input class="rowcol" type="email" id="inputEmail4" placeholder="Email" name="">
-                                <input class="rowcol" type="tel" name="" id="" placeholder="Phone Number">
-                            </div>
-                        </div>
-                    </div>
                     <div class="conf">
                         <button class="btnconf" type="">Confirm</button>
                     </div>
@@ -49,54 +47,3 @@
         </div>
     </div>
 </div>
-
-{{!-- <div class="div">
-                <div class="just-div" id="add">
-                <form action="" method="">
-                    <div>
-                        <div class="traveller a">
-                            <div class="note">
-                                <h5>Note: "First Name" and "Last Name" must match your travel document exactly.</h5>                                
-                            </div>
-                            <div class="t">
-                                <h4>Form for Traveller</h4>
-                            </div>
-                            <form action="">
-                                <div class="row">
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="First name" name="fName">
-                                        <input type="text" class="form-control" placeholder="Last name" name="lName">
-                                        <input type="date" name="bdate" id="" placeholder="birthday">
-                                        <input class="age" type="number" name="age" id="age" min="0" max="100" step="1" placeholder="Age">
-                                    </div>
-                                    <div>
-                                        <label class="gender" for="gender" >
-                                            <input class="type" type="radio" name="gender" id="gender">f</input>
-                                            <input class="type" type="radio" name="gender" id="gender">m</input>
-                                    </label>
-                                    </div>
-                                </div>
-                                <div class="btn">
-                                    <button id="push">add Traveller</button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                    </div>
-                    <div>
-                        <div class="traveller b">
-                            <div class="note">
-                                <h5>Note: This is who we will be in contact with about this booking</h5>
-                            </div>
-                            <form action="">
-                                <div class="">
-                                    <input type="text" class="form-control" placeholder="First name" name="">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="">
-                                    <input type="tel" name="" id="" placeholder="Phone Number">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="bt"><button>Confirm</button></div>
-                </form>
-            </div> --}}

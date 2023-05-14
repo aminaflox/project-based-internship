@@ -50,7 +50,13 @@ router.post('/signin/password',
   function(req, res) {
     res.redirect('/');
   });
-  router.route('/signup').get(function (req, res) {
+router.get('/sign-out', function(req, res, next) {
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
+  });
+router.route('/signup').get(function (req, res) {
     res.render('signup', {layout:'main'});
   })
 

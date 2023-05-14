@@ -9,7 +9,7 @@
     <div class="main-div" id="main">
         <div class="search" id="search">
             <div class="dropsearch">
-                <form action="/search" class="from" method="">
+                <form action="/search" class="from" method="GET" id="form">
                     <div class="flight">
                         <label for="departFrom">Depart from</label>
                         <input class="input" type="text" name="departFrom" id="departFrom" placeholder="from">
@@ -27,18 +27,65 @@
                         <input class="input" type="date" name="arrivalDate" id="arrivalDate">
                     </div>
                     <div class="flight">
-                        <label for="">passenger</label>
-                        <input class="input" type="number" id="" name="" min="0" max="100" step="1" placeholder="passenger">
+                        <label for="passengers">Travellers</label>
+                        <input class="input" type="number" id="passengers" name="passengers" min="0" max="100" step="1" placeholder="passengers">
                     </div>
                     <div>
-                        <label class="journey" for="journey">
-                            <input class="jour input" type="radio" name="journey" id="journey">&nbsp;return</input>
+                        <label class="journey" for="journey" id="journeyID">
+                            <input class="jour input" type="radio" name="journey" id="journey uh">&nbsp;return</input>
                             <input class="jour input" type="radio" name="journey" id="journey">&nbsp;one way</input>
                         </label>
                     </div>
-                    <button type="submit" class="flsubmit">search</button>
+                    <button type="submit" class="flsubmit" onclick="checkFormInputs()">search</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+<script>
+  function checkFormInputs() {
+    const form = document.getElementById("form");
+    const df = document.getElementsByName("departFrom");
+    const at = document.getElementsByName("arriveTo");
+    const dd = document.getElementsByName("departureDate");
+    const ad = document.getElementsByName("arrivalDate");
+    const ps = document.getElementsByName("passengers");
+
+    let isFormValid = true;
+
+    if ([df, at, dd, ad, ps].every(inputs => inputs.length === df.length)) {
+      for (let i = 0; i < df.length; i++) {
+        if (df[i].value === "") {
+          alert("Please enter a departure location");
+          isFormValid = false;
+          break;
+        }else if (at[i].value===""){
+          alert("Please enter a arrival location");
+          isFormValid = false;
+        }else if (dd[i].value===""){
+          alert("Please enter a departure date");
+          isFormValid = false;
+        }else if (ad[i].value===""){
+          alert("Please enter a arrival date");
+          isFormValid = false;
+        }else if (ps[i].value===""){
+          alert("Please enter a number of travelers");
+          isFormValid = false;
+        }
+      }
+    } else {
+      alert("whoops");
+      isFormValid = false;
+    }
+    if (isFormValid) {
+    form.submit();
+    }
+}
+document.querySelector("form").addEventListener("submit", function(event) {
+  if (!checkFormInputs()) {
+    event.preventDefault(); // Prevent the form from submitting
+  }
+});
+
+
+</script>

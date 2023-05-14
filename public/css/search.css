@@ -10,17 +10,48 @@
 /* middle */
 
 .mar{
-    height: 16em;
+    height: 5em;
 }
-.div{
+
+
+.findsearch{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
+.searchmaindiv{
+    height: 55em;
+}
+
+
+.diviv{
     height: 50em;
     text-align: center;
+    float: right;
+    margin-right: 5em;
+    
 }
 
+.sdiv{
+    margin-left: 5em;
+}
 
+.havefound{
+    border: 1px solid gray;
+    width: 20em;
+    margin-bottom: 2.5em;
+}
+.continuebtn{
+    float: right;
+}
 
-
-
+.backandnotfound{
+    text-align: center;
+}
+.goback{
+    margin-top: 3em;
+}
 
 
 

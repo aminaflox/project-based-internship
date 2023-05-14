@@ -1,6 +1,6 @@
 insert into public."journey"("journeyID","cost","origin","destination")
-values (1,1166,'Singapore','Texas'),
-	(2,708,'Dubai','London'),
+values (1,1166,'Singapore','United States'),
+	(2,708,'United Arab Emirates','United Kingdom'),
 	(3,719,'Greece','Japan'),
 	(4,602,'Japan','Greece'),
 	(5,124,'Turkey','Greece'),

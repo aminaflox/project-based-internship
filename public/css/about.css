@@ -8,19 +8,28 @@
 
 
 /* middle */
-.home{
+.homee{
     padding-top: 5em;
 }
-.hm{
+.hmee{
     text-align: center;
 }
+.wl{
+    font-size: 25px;
+    font-weight: 800;
+}
 
-.img{
+.imgone{
     text-align: center;
     height: 300px;
 }
-.logo{
-    height: 250px;
+.logoo{
+    text-align: center;
+    height: 200px;
+    /* min-width: min-content;
+    max-height: max-content; */
+    /* width: 250px; */
+    
 }
 .we{
     text-align: center;
@@ -50,7 +59,7 @@
     min-width: fit-content;
     min-height: min-content;
 }
-.pic{
+.picme{
     height: 300px;
 }
 
@@ -62,44 +71,3 @@
     height: 30px;
 }
 
-
-
-
-
-/* .m{
-    margin-top: 5em;
-    font-size: 19px;
-    margin-bottom: 1em;
-    min-width: 10em;
-    max-width: 20em;
-    min-height: 5em;
-    max-height: max-content;
-    margin-left: 5em;
-    margin-right: 5em;
-}
-.we{
-    padding: 0;
-}
-.start img{
-    height: 200px;
-}
-hr{
-    margin-top: 2em;
-    width: 10em;
-    height: 0.1em;
-    background-color: blue;
-}
-.wl{
-    font-size: 18px !important;
-    padding-left: 0.2em;
-    font-weight: 800 !important;
-}
-.start p{
-    margin: 1em;
-    font-size: 20px;
-}
-.strt{
-    margin-top: 8em;
-    margin-bottom: 5em;
-    text-align: center;
-} */

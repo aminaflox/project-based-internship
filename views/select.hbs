@@ -1,0 +1,55 @@
+<div class="backdiv">
+    <form action="/search/passenger" method="post">
+        <div class="bookflightinfo">
+            <div class="bfi">
+                <h3>Booking Flight Information</h3>
+            </div>
+            {{#formData}}
+            <div class="flyin">
+                <div class="details">
+                    <h2>Flight Details</h2>
+                </div>
+                <div class="fromto">
+                    <p>Airline {{airline_code}}</p>
+                    <p id="departFrom">From {{departFrom}}</p>
+                    <p class="flyto">To {{arriveTo}}</p>
+                </div>
+                <div class="flightdetails">
+                    <ul class="classul">
+                        <li class="flydet">Flight no</li>
+                        
+                        <li class="flydet">Class</li>
+                        <li class="flydet">Date</li>
+                        <li class="flydet">Time</li>
+                        <li class="flydet">Cost</li>
+                    </ul>
+                </div>
+                <div class="emty">
+                    <ul class=" empty">
+                        <li class="hide mt" id="flightName">{{flightName}}</li>
+                        <li class="hide mt">E</li>
+                        <li class="hide mt">{{departureDate}}</li>
+                        <li class="hide mt">6:45</li>
+                        <li class="hide mt">{{cost}}</li>
+                    </ul>
+                </div>
+                {{/formData}}
+                <div class="flyseat">
+                    <p id="seatNO">Seat 14A</p>
+                </div>
+                <div>
+                    <button class="continue back" type="button" onclick="back()">Back</button>
+                    <button class="continue forward" type="submit">Continue</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{{!-- <p>From <span id="departFrom"></p>
+      <p class="flyto">To <span id="arriveTo"></p> --}}
+
+<script>
+    function back() {
+        window.history.back();
+    }
+</script>

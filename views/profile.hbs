@@ -9,8 +9,8 @@
             <div class="">
               <img class="img" src="https://cdn-icons-png.flaticon.com/128/9341/9341752.png" alt="">
             </div>
-            <h6 class="userName">user Name</h6>
-            <span>userEmail@gmail.com</span>
+            <h6 class="userName">{{user.firstName}}</h6>
+            <span>{{user.email}}</span>
           </div>
           <div class="cardbody">
             <div>
@@ -34,13 +34,13 @@
             <div class="card-body">
               <form action="/">
                 <div class="formdiv">
-                  <input class="formin" placeholder="name" type="text" value="" name="firstName" id="">
+                  <input class="formin" placeholder="{{user.firstName}}" type="text" value="" name="firstName" id="">
                 </div>
                 <div class="formdiv">
-                  <input class="formin" placeholder="Phone number" type="url" value="" name="phonenumber" id="">
+                  <input class="formin" placeholder="{{user.phonenumber}}" type="url" value="" name="phonenumber" id="">
                 </div>
                 <div class="formdiv">
-                  <input class="formin" placeholder="email" readonly="readonly" type="email" value="" name="email" id="">
+                  <input class="formin" placeholder="{{user.email}}" readonly="readonly" type="email" value="" name="email" id="">
                 </div>
                 <div class="formdiv">
                   <input class="formin" placeholder="password" type="password" name="password" id="">

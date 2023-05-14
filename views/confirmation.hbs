@@ -1,0 +1,15 @@
+<main style="height:50vw;width:100%;background-color:rgb(198, 194, 189);text-align:center;">
+    <div class="RedirectionToHome" style="padding-top:20%;">
+        <h1>Your Booking was Succesful</h1>
+        <p>We hope you have a great Journey !</p>
+        
+    </div>
+</main>
+
+<script>
+    setTimeout(function(){
+        app.get('/',function(req,res,next){
+            res.render('home', {layout:'main', user: req.session.passport.user.userID})
+        })
+    },3000);
+</script>

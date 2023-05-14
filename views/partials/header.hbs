@@ -1,16 +1,64 @@
 <header>
     <nav class="navbar">
+        <div>
+            <a class="logo" href="/">AirNet</a>
+        </div>
         <ul class="navul">
             <li class="navlist">
-                <a class="nav-home" href="/">home</a>
+                <a class="nav-home home another" href="/">Home</a>
             </li>
             <li class="navlist">
-                <a href="/search">search</a>
+                <a class="nav-home home" href="/about">About us</a>
             </li>
             <li class="navlist">
-                <a href="/signin" id="nm">sign in</a>
+                <div class="dropdown">
+                    {{#if user}}
+                    <button id="mnl" onclick="my()" class="signinbtn userbtn">{{user.firstName}}</button>
+                    <div class="miss">
+                        <ul id="myDropdown" class="dropit">
+                            <li class="droplist"><a class="adrop" href="/profile">Profile</a></li>
+                            <li class="droplist"><a class="adrop" href="/myBooking">Booking</a></li>
+                            <li class="droplist"><a class="adrop" href="/sign-out">Logout</a></li>
+                        </ul>
+                    </div>
+                    {{else}}
+                    <button class="nouse"><a class="nav-home" href="/signin" id="nm">Sign In</a></button>
+                    {{/if}}
+                </div>
             </li>
             
         </ul>
     </nav>
 </header>
+<script>
+
+    function my() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+    if (!event.target.matches('.signinbtn')) {
+        var dropdowns = document.getElementsByClassName("dropit");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
+    }
+    {{!-- function singinuser(){
+         let me = document.getElementById("nm");
+        if (me == null) {
+            me = document.getElementById("mnl");
+        }
+        if (me.innerText === "Sign In") {
+            alert('Please sign in to continue');
+        } else {
+            return null;
+        }
+    }
+    window.onload = function(){
+        singinuser();
+    } --}}
+</script>

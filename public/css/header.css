@@ -2,6 +2,17 @@
 header{
     height: 4.6em;
 }
+
+.logo{
+    float: left;
+    margin: 0.6em 0em 1.5em 1em;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 38px;
+}
+.logo:hover{
+    color: white;
+}
+
 .navbar{
     background-color: rgb(119, 130, 226);
     position: fixed;
@@ -18,21 +29,82 @@ header{
     margin-bottom: 0;
     float: right;
 }
-.navbar li{
+.navlist{
     display: inline-block;
-    margin: 2.5em 1.5em 1.5em 1.5em;
+    margin: 2em 0em 1.5em 0em;
+}
+.nouse{
+    border: transparent;
+    border-radius: 0%;
+    margin-right: 2.5em;
+    margin-left: 1em;
 }
 .navbar li a{
     text-decoration: none;
 }
-.navbar li a:hover{
+.nav-home:hover{
     color: white;
 }
+.home{
+    margin-right: 0em;
+}
+.another{
+    margin-right: 1.5em;
+}
+.snbtn{
+    margin-right: 0.5em;
+}
+
 a{
     color: black;
     text-decoration: none;
 }
+.signinbtn{
+    border: transparent;
+    border-radius: 0%;
+    margin-left: -2em;
+    width: fit-content;
+}
+.signinbtn:hover{
+    background-color: rgba(255, 255, 255, 0.534);
+}
 
-a:hover{
-    color: aqua;
+.miss{
+    padding-right: 7em;
+}
+
+.dropit{
+    display: none;
+    position: absolute; 
+    background-color: rgb(119, 130, 226);
+    width: 5.4em;
+    height: fit-content;
+    padding-left: 0%;
+}
+.dropit:hover{
+    border-color: azure;
+}
+
+.droplist{
+    border: 1px solid black;
+}
+.droplist:hover{
+    border-color: azure;
+}
+
+.adrop:hover{
+    border-color: azure;
+}
+.adrop{
+    display: block;
+    margin: 1em 1em 1em 0.5em;
+
+    /* border-bottom: 1px solid black; */
+}
+.show {
+    display: block;
+}
+
+.dropdown{
+    margin-right: -1.3em;
 }

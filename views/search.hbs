@@ -1,14 +1,53 @@
-<div>
-        <div class="mar" id="mar">
-
-        </div>
+<div class="searchmaindiv">
+    <div>
+        <div class="mar" id="mar"></div>
     </div>
 
-    <div class="div">
-        <div>
-            <a href="/inform"><button>book</button></a>
+    <div>
+        
+            <div class="sdiv">
+            {{#if flights}}
+                <div class="findsearch">
+                    <p class="searchisfound">We have found the results you were looking for</p>
+                </div>
+                {{#each flights}}
+                <form action="/select" method="get">
+                    <div class="divforfound">
+                        <ul class="havefound">
+                            <li class="flyinfo">Departure date: {{departureDate}}</li>
+                            <li class="flyinfo">Departure City: {{departFrom}}</li>
+                            <li class="flyinfo">Arrival City: {{arriveTo}}</li>
+                            <li class="flyinfo">Flight Name: {{flightName}} {{airline_code}} {{flightNO}}</li>
+                            <div class="continuebtn">
+                                <button id="continueButton">Select</button>
+                            </div>
+                        </ul>
+                    </div>
+                </form>
+                <div class="backandnotfound">
+                    <button class="goback" onclick="goBack()">Go Back</button>
+                </div>
+                {{/each}}
+            {{else}}
+            <div class="backandnotfound">
+                <p class="nofound">There are no results matching your search criteria.</p>
+                <button class="goback" onclick="goBack()">Go Back</button>
+            </div>
+            {{/if}}
         </div>
-        <div>
-            <a href="/profile"><button>pro</button></a>
-        </div>
+        
     </div>
+
+    {{!-- <div class="diviv">
+        <div>
+            <a href="/select"><button>Continue</button></a>
+        </div>
+    </div> --}}
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+
+</script>

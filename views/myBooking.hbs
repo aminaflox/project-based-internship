@@ -1,0 +1,18 @@
+<div class="mybook">
+  <h1>MY BOOKINGS</h1>
+  <div class="bookingFlex">
+    {{#each bookings}}
+      <div>
+        {{#each this}}
+        <div class="bookingInfo">
+          {{departFrom}}-{{arriveTo}}, 
+          <br>
+          {{departureDate}}, {{arrivalDate}}
+          <br>
+          {{airline_code}}
+        </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</div>

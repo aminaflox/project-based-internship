@@ -1,0 +1,71 @@
+.backdiv{
+    height: 30em;
+}
+
+.bookflightinfo{
+    text-align: center;
+    margin-top: 5em;
+}
+
+.bfi{
+    margin-bottom: 2em;
+}
+
+.flyin{
+    padding-top: 3em;
+    display: inline-block;
+    border: 2px ;
+    border-radius: 55px;
+    width: 30em;
+    height: 20em;
+    padding-right: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.651) 0px 3px 8px;
+}
+
+.details{
+    margin-bottom: 2em;
+    font-size: 22px;
+}
+
+/* .fromto{
+    font-weight: bold;
+} */
+
+.flightdetails{
+    margin-top: 1em;
+}
+
+.flydet{
+    display: inline;
+    margin: 0.9em;
+    list-style-type: none;
+}
+
+.mt{
+    border: 1px;
+    margin: 0.5em;
+    list-style-type: none;
+    display: inline;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+
+.continue{
+    border: none;
+    margin: 2em 1em 1em 1em;
+    box-shadow: rgba(0, 0, 0, 0.692) 0px 3px 8px;
+    background-color: white;
+}
+.back{
+    float: left;
+    margin-left: 4em;
+    height: 3em;
+    width: 6em;
+}
+.forward{
+    float: right;
+    margin-right: 4em;
+    height: 3em;
+    width: 6em;
+}

@@ -63,10 +63,10 @@ CREATE TABLE public."journey" (
 
 CREATE TABLE public."airport" (
 	"airportID" integer NOT NULL,
-	"airportCode" TEXT NOT NULL unique,
+	"airportCity" TEXT NOT NULL unique,
 	"name" TEXT NOT NULL,
 	"country" TEXT NOT NULL,
-	"region" TEXT NOT NULL,
+	"airportCode" TEXT NOT NULL,
 	CONSTRAINT "airport_pk" PRIMARY KEY ("airportID")
 ) WITH (
   OIDS=FALSE
@@ -85,7 +85,7 @@ CREATE TABLE public."admin" (
 
 CREATE TABLE public."ticket" (
 	"ticketID" integer NOT NULL,
-	"status" TEXT NOT NULL,
+	"status" TEXT,
 	"fair" FLOAT NOT NULL,
 	"seatNO" text NOT NULL unique,
 	"class" TEXT NOT NULL,
@@ -108,8 +108,7 @@ CREATE TABLE public."payment" (
 
 
 CREATE TABLE public."customer" (
-	"customerID" integer NOT NULL,
-	"paymnet_id" integer NOT NULL,
+	"customerID" integer NOT NULL
 	CONSTRAINT "customer_pk" PRIMARY KEY ("customerID")
 ) WITH (
   OIDS=FALSE
@@ -122,8 +121,6 @@ CREATE TABLE public."passenger" (
 	"fName" TEXT NOT NULL,
 	"lName" TEXT NOT NULL,
 	"bdate" DATE NOT NULL,
-	"age" integer NOT NULL,
-	"gender" varchar(1) NOT NULL,
 	CONSTRAINT "passenger_pk" PRIMARY KEY ("cusID")
 ) WITH (
   OIDS=FALSE
@@ -154,8 +151,7 @@ CREATE TABLE public."receives" (
 
 
 CREATE TABLE public."receive" (
-	"pay_id" integer NOT NULL,
-	"ticketID" integer NOT NULL,
+	"pay_id" integer NOT NULL
 	CONSTRAINT "receive_pk" PRIMARY KEY ("pay_id","ticketID")
 ) WITH (
   OIDS=FALSE
@@ -175,8 +171,8 @@ CREATE TABLE public."belongsTo" (
 
 ALTER TABLE "flight" ADD CONSTRAINT "flight_fk0" FOREIGN KEY ("airline_code") REFERENCES "airline"("airlineCode");
 ALTER TABLE "flight" ADD CONSTRAINT "flight_fk1" FOREIGN KEY ("journeyID") REFERENCES "journey"("journeyID");
-ALTER TABLE "flight" ADD CONSTRAINT "flight_fk2" FOREIGN KEY ("departFrom") REFERENCES "airport"("airportCode");
-ALTER TABLE "flight" ADD CONSTRAINT "flight_fk3" FOREIGN KEY ("arriveTo") REFERENCES "airport"("airportCode");
+ALTER TABLE "flight" ADD CONSTRAINT "flight_fk2" FOREIGN KEY ("departFrom") REFERENCES "airport"("airportCity");
+ALTER TABLE "flight" ADD CONSTRAINT "flight_fk3" FOREIGN KEY ("arriveTo") REFERENCES "airport"("airportCity");
 
 
 
@@ -186,7 +182,7 @@ ALTER TABLE "admin" ADD CONSTRAINT "admin_fk0" FOREIGN KEY ("admin_id") REFERENC
 
 
 ALTER TABLE "customer" ADD CONSTRAINT "customer_fk0" FOREIGN KEY ("customerID") REFERENCES "user"("userID");
-ALTER TABLE "customer" ADD CONSTRAINT "customer_fk1" FOREIGN KEY ("paymnet_id") REFERENCES "payment"("paymentID");
+-- ALTER TABLE "customer" ADD CONSTRAINT "customer_fk1" FOREIGN KEY ("paymnet_id") REFERENCES "payment"("paymentID");
 
 ALTER TABLE "passenger" ADD CONSTRAINT "passenger_fk0" FOREIGN KEY ("cusID") REFERENCES "customer"("customerID");
 
@@ -197,7 +193,7 @@ ALTER TABLE "receives" ADD CONSTRAINT "receives_fk0" FOREIGN KEY ("custID") REFE
 ALTER TABLE "receives" ADD CONSTRAINT "receives_fk1" FOREIGN KEY ("ticketID") REFERENCES "ticket"("ticketID");
 
 ALTER TABLE "receive" ADD CONSTRAINT "receive_fk0" FOREIGN KEY ("pay_id") REFERENCES "payment"("paymentID");
-ALTER TABLE "receive" ADD CONSTRAINT "receive_fk1" FOREIGN KEY ("ticketID") REFERENCES "ticket"("ticketID");
+-- ALTER TABLE "receive" ADD CONSTRAINT "receive_fk1" FOREIGN KEY ("ticketID") REFERENCES "ticket"("ticketID");
 
 ALTER TABLE "belongsTo" ADD CONSTRAINT "belongsTo_fk0" FOREIGN KEY ("flightNO") REFERENCES "flight"("flightNO");
 ALTER TABLE "belongsTo" ADD CONSTRAINT "belongsTo_fk1" FOREIGN KEY ("seat_no") REFERENCES "ticket"("seatNO");
