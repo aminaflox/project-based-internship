@@ -139,61 +139,57 @@ async function findFlights(journeyID, departFrom, arriveTo, departureDate, arriv
 async function createTicketPassengerRelation(userID, data, callback){
     console.log("here is ");
 
+    let seatNO = Math.floor(Math.random() * 100) + 1;
      let date = new Date();
      let bookingID=generateTextID();
-     console.log(" I'M HERE",data)
+     let ticketID = 'ticket'+bookingID;
+     console.log(" I'M HERE",data);
      if (typeof data.lName ==='string'){
         data = {
-            cusID: [data.cusID],
+            cusID: [userID],
             fName: [data.fName],
             lName: [data.lName],
             bdate: [data.bdate]
         }
      }
-
+     console.log("last ",data);
      try{
         const client  = await connect();
-        const res = await client.query(sql3);
-        console.log(res);
 
         const sql7= `INSERT INTO "book"("bookID","userID","journeyID","bookingDate")
-        VALUES('${bookingID}','${userID}','${journeyID}','${date}')`;
-        console.log(res);
-     
+        VALUES('${bookingID}','${data.cusID}','${journeyID}','${date}')`;
+        await client.query(sql7);
+
         //customer
-     const sql = `INSERT INTO "customer"("customerID")
-     SELECT "userID" FROM "user" WHERE "userID"= ${userID}`;
-    //  console.log("2",sql);
+        const sql = `INSERT INTO "customer"("customerID")
+        SELECT "userID" FROM "user" WHERE "userID"= ${userID}`;
+        await client.query(sql);
      
-     //passenger
-     let sql3 = `INSERT INTO "passenger"("cusID","fName","lName","bdate")
-     VALUES('${data.cusID}', '${data.fName}', '${data.lName}', '${data.bdate}')`;
-     
-    //  await client.query(sql3);
-    //  console.log("3",sql3);
-        
-     //belongsTo
-     const sql4 = {text: `INSERT INTO "belongsTo"("flightNO","seat_no") 
-     SELECT f."flightNO", t."seatNO"
-     FROM "flight" as f, "ticket" as t
-     WHERE f."flightNO"=$1 and t."seatNO"=$2`, values: [flightNO, seatNO]};
-    
-    //  console.log(sql4 ,"this is sql4");
-    // await client.query(sql4);
+        //passenger
+        let sql3 = `INSERT INTO "passenger"("cusID","fName","lName","bdate")
+        VALUES('${data.cusID}', '${data.fName}', '${data.lName}', '${data.bdate}')`;
+         await client.query(sql3);
 
-    //receives
-    const sql5 = `INSERT INTO "receives"("custID", "ticketID")
-    SELECT c."customerID", t."ticketID"
-    FROM "customer" as c, "ticket" as t
-    WHERE c."customerID"='${userID}' AND t."ticketID"="ticketID"`;
-        // console.log("5",sql5);
+        //belongsTo
+        const sql4 = {text: `INSERT INTO "belongsTo"("flightNO","seat_no") 
+        SELECT f."flightNO", t."seatNO"
+        FROM "flight" as f, "ticket" as t
+        WHERE f."flightNO"=$1 and t."seatNO"=$2`, values: [flightNO, seatNO]};
+        await client.query(sql4);
 
+        //receives
+        const sql5 = `INSERT INTO "receives"("custID", "ticketID")
+        SELECT c."customerID", t."ticketID"
+        FROM "customer" as c, "ticket" as t
+        WHERE c."customerID"='${data.cusID}' AND t."ticketID"='${ticketID}'`;
+        //console.log(sql5);
+        await client.query(sql5);
 
-    callback( null, bookingID, sql);
-    client.release();
+        callback( null, bookingID);
+        client.release();
 
     //LAST LINE OF CODE
-    //sendEmail(passenger.Fname,passenger.Lname,passenger.Email,bID,ticketID,resF.rows[0].startAirportID,resF.rows[0].finishAirportID,
+    //sendEmail(passenger.Fname,passenger.Lname,passenger.Email,bookingID,ticketID,resF.rows[0].startAirportID,resF.rows[0].finishAirportID,
     //resF.rows[0].departureDate,resF.rows[0].departureTime).then(result=> 
     //console.log('Email sent...',result)).catch((error)=>console.log(error.message))
     }catch(err){

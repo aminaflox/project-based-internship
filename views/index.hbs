@@ -1,8 +1,9 @@
  <div class="indexbody">
-        <div>
-        <div class="mar" id="mar">
-
-        </div>
+    <div>
+        <div class="mar" id="mar"></div>
+    </div>
+    <div>
+      <p class="where">Where would you like to go?</p>
     </div>
 
     <!-- SEARCH -->
@@ -11,30 +12,30 @@
             <div class="dropsearch">
                 <form action="/search" class="from" method="GET" id="form">
                     <div class="flight">
-                        <label for="departFrom">Depart from</label>
+                        <label for="departFrom">From</label>
                         <input class="input" type="text" name="departFrom" id="departFrom" placeholder="from">
                     </div>
                     <div class="flight">
-                        <label for="arriveTo">Arrive to</label>
+                        <label for="arriveTo">To</label>
                         <input class="input" type="text" name="arriveTo" id="arriveTo" placeholder="to">
                     </div>
                     <div class="flight">
-                        <label for="departureDate">Departure date</label>
+                        <label for="departureDate">Depart</label>
                         <input class="input" type="date" name="departureDate" id="departureDate">
                     </div>
                     <div class="flight">
-                        <label for="arrivalDate">Arrival date</label>
+                        <label for="arrivalDate">Return</label>
                         <input class="input" type="date" name="arrivalDate" id="arrivalDate">
                     </div>
                     <div class="flight">
-                        <label for="passengers">Travellers</label>
+                        <label for="passengers">Passengers</label>
                         <input class="input" type="number" id="passengers" name="passengers" min="0" max="100" step="1" placeholder="passengers">
                     </div>
                     <div>
-                        <label class="journey" for="journey" id="journeyID">
+                        {{!-- <label class="journey" for="journey" id="journeyID">
                             <input class="jour input" type="radio" name="journey" id="journey uh">&nbsp;return</input>
                             <input class="jour input" type="radio" name="journey" id="journey">&nbsp;one way</input>
-                        </label>
+                        </label> --}}
                     </div>
                     <button type="submit" class="flsubmit" onclick="checkFormInputs()">search</button>
                 </form>

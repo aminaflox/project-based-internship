@@ -16,18 +16,38 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-bottom: 0;
-    height: 70em;
+    height: 55em;
     min-width: 30em;
 }
 
 
-
+.mar{
+    margin-bottom: 4.5em;
+}
 
 /* middle */
 .search{ 
     height: 30em;  
     margin-bottom: 10em;
 } 
+.where{
+    color: white;
+    margin: 1em 0em 5em 0em;
+    text-align: center;
+    font-size: 22px;
+    animation: glow 1s ease-in-out infinite alternate;
+    /* background-color: rgb(119, 130, 226); */
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3f3dcd, 0 0 40px #4146e3, 0 0 50px #8785e8, 0 0 60px #0f00e6c1, 0 0 70px #0008e6ba;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #714dff, 0 0 40px #564dff, 0 0 50px #4d9dff, 0 0 60px #824dff, 0 0 70px #4d5fff, 0 0 80px #914dff;
+    }
+  }
+
 
 .dropsearch{ 
     height: fit-content;
@@ -72,15 +92,17 @@
     outline-style: none;
 }
 .flsubmit{
-    margin-top: 3em;
-    float: right;
-    margin-right: 0.5em;
+    margin-top: 2em;
+    margin-left: 0.3em;
+    border: 0ch;
+    box-shadow: rgba(0, 0, 0, 0.726) 0px 5px 10px;
+
 }
 .fls{
     display: inline;
 }
 .flsubmit:hover{
-    background-color: rgba(68, 246, 234, 0.807);
+    background-color: rgba(19, 23, 224, 0.459);
 }
 
 .journey{

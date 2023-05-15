@@ -1,10 +1,12 @@
 <div class="searchmaindiv">
     <div>
-        <div class="mar" id="mar"></div>
+        <div class="mar" id="mar">
+            <div class="backandnotfound">
+                <button class="goback" onclick="goBack()">Go Back</button>
+            </div>
+        </div>
     </div>
-
     <div>
-        
             <div class="sdiv">
             {{#if flights}}
                 <div class="findsearch">
@@ -14,20 +16,22 @@
                 <form action="/select" method="get">
                     <div class="divforfound">
                         <ul class="havefound">
-                            <li class="flyinfo">Departure date: {{departureDate}}</li>
-                            <li class="flyinfo">Departure City: {{departFrom}}</li>
-                            <li class="flyinfo">Arrival City: {{arriveTo}}</li>
-                            <li class="flyinfo">Flight Name: {{flightName}} {{airline_code}} {{flightNO}}</li>
+                            <li class="flyinfo padd">Depart date: {{departureDate}}</li>
+                            <li class="flyinfo">From: {{departFrom}}</li>
+                            <li class="flyinfo">To: {{arriveTo}}</li>
+                            <li class="flyinfo">Flight Name: {{flightName}}</li>
+                            <li class="flyinfo">Airline Code:  {{airline_code}}</li>
                             <div class="continuebtn">
-                                <button id="continueButton">Select</button>
+                                <button class="selectbtn" id="continueButton">Select</button>
                             </div>
                         </ul>
                     </div>
                 </form>
-                <div class="backandnotfound">
-                    <button class="goback" onclick="goBack()">Go Back</button>
-                </div>
+                
                 {{/each}}
+                {{!-- <div class="backandnotfound">
+                    <button class="goback" onclick="goBack()">Go Back</button>
+                </div> --}}
             {{else}}
             <div class="backandnotfound">
                 <p class="nofound">There are no results matching your search criteria.</p>

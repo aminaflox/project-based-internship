@@ -14,12 +14,12 @@
 .flyin{
     padding-top: 3em;
     display: inline-block;
-    border: 2px ;
+    border: 1px ;
     border-radius: 55px;
     width: 30em;
     height: 20em;
     padding-right: 1.5em;
-    box-shadow: rgba(0, 0, 0, 0.651) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.692) 0px 3px 8px;
 }
 
 .details{
